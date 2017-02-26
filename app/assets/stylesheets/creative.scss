@@ -161,7 +161,7 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('img/header.jpg');
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), image-url('img/header.jpg');
   background-size: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -424,19 +424,19 @@ body {
   webkit-tap-highlight-color: #222222;
 }
 .school-tour{
-  background-image: url("img/school_tour.jpg");
+  background-image: image-url("img/school_tour.jpg");
   background-repeat: no-repeat;
   border-style: solid;
   border-color: #323232;
 }
 .dinner{
-    background-image: url("img/dinner.jpg");
+    background-image: image-url("img/dinner.jpg");
     background-repeat: no-repeat;
     border-style: solid;
     border-color: #323232;
 }
 .photoshoot{
-    background-image: url("img/memories.jpg");
+    background-image: image-url("img/memories.jpg");
     background-repeat: no-repeat;
     border-style: solid;
     border-color: #323232;
@@ -445,7 +445,7 @@ i.glyphicon-home{
   font-size: 3.5em;
 }
 .classmate{
-      background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('img/bg_classmate.jpg');
+      background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), image-url('img/bg_classmate.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
       background-size: 100%
@@ -456,7 +456,7 @@ i.glyphicon-home{
   font-family: papyrus;
 }
   .rsvp{
-      background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('img/header.jpg');
+      background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), image-url('img/header.jpg');
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: 100%
