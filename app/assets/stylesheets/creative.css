@@ -12,18 +12,19 @@ body {
   font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
 }
 hr {
-  border-color: #DAA520;
+  border-color: white;
   border-width: 3px;
-  max-width: 50px;
+  max-width: 400px;
 }
 hr.light {
   border-color: white;
+  max-width: 100px;
 }
 a {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
-  color:	#DAA520;
+  color: white;
 }
 a:hover,
 a:focus {
@@ -35,7 +36,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family:Piefont;
+  color: gold;
 }
 p {
   font-size: 16px;
@@ -43,7 +45,7 @@ p {
   margin-bottom: 20px;
 }
 .bg-primary {
-  background-color: #DAA520;
+  background-color: #292929;
 }
 .bg-dark {
   background-color: #222222;
@@ -70,7 +72,7 @@ aside {
   transition: all 0.35s;
 }
 .navbar-default .navbar-header .navbar-brand {
-  color: #DAA520;
+  color: #292929;
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -94,12 +96,13 @@ aside {
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus:hover {
-  color: #DAA520;
+  color: #292929;
 }
 .navbar-default .nav > li.active > a,
 .navbar-default .nav > li.active > a:focus {
-  color: #DAA520 !important;
+  color: gold !important;
   background-color: transparent;
+  font-size: 20px;
 }
 .navbar-default .nav > li.active > a:hover,
 .navbar-default .nav > li.active > a:focus:hover {
@@ -108,7 +111,6 @@ aside {
 @media (min-width: 768px) {
   .navbar-default {
     background-color: transparent;
-    border-color: rgba(255, 255, 255, 0.3);
   }
   .navbar-default .navbar-header .navbar-brand {
     color: rgba(255, 255, 255, 0.7);
@@ -126,12 +128,14 @@ aside {
     color: white;
   }
   .navbar-default.affix {
-    background-color: white;
-    border-color: rgba(34, 34, 34, 0.05);
+    background-color: #292929;
+    border-color: gold;
+    height: 70px;
+    opacity: 0.9;
   }
   .navbar-default.affix .navbar-header .navbar-brand {
-    color: #DAA520;
-    font-size: 14px;
+    color: gold;
+    font-size: 24px;
   }
   .navbar-default.affix .navbar-header .navbar-brand:hover,
   .navbar-default.affix .navbar-header .navbar-brand:focus {
@@ -139,24 +143,28 @@ aside {
   }
   .navbar-default.affix .nav > li > a,
   .navbar-default.affix .nav > li > a:focus {
-    color: #222222;
+    margin-top: 10px;
+    color: coral;
   }
   .navbar-default.affix .nav > li > a:hover,
   .navbar-default.affix .nav > li > a:focus:hover {
-    color: #DAA520;
+    color: gold;
   }
 }
 header {
   position: relative;
   width: 100%;
+  height: 100%;
   min-height: auto;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('header.jpg');
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('img/header.jpg');
+  background-size: 100%;
   background-attachment: fixed;
+  background-repeat: no-repeat;
   text-align: center;
   color: white;
 }
@@ -282,7 +290,7 @@ header .header-content .header-content-inner p {
   margin: 0 auto 20px;
 }
 .text-primary {
-  color: #DAA520;
+  color: #292929;
 }
 .no-gutter > [class*='col-'] {
   padding-right: 0;
@@ -338,8 +346,8 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: white;
-  background-color: #DAA520;
-  border-color: #DAA520;
+  background-color: #292929;
+  border-color: #292929;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
@@ -377,11 +385,11 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #DAA520;
-  border-color: #DAA520;
+  background-color: #292929;
+  border-color: #292929;
 }
 .btn-primary .badge {
-  color: #DAA520;
+  color: #292929;
   background-color: white;
 }
 .btn {
@@ -415,3 +423,80 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #222222;
 }
+.school-tour{
+  background-image: url("img/school_tour.jpg");
+  background-repeat: no-repeat;
+  border-style: solid;
+  border-color: #323232;
+}
+.dinner{
+    background-image: url("img/dinner.jpg");
+    background-repeat: no-repeat;
+    border-style: solid;
+    border-color: #323232;
+}
+.photoshoot{
+    background-image: url("img/memories.jpg");
+    background-repeat: no-repeat;
+    border-style: solid;
+    border-color: #323232;
+}
+i.glyphicon-home{
+  font-size: 3.5em;
+}
+.classmate{
+      background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('img/bg_classmate.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+      background-size: 100%
+}
+.classmate h1{
+  text-align: center;
+  margin-left: -40px;
+  font-family: papyrus;
+}
+  .rsvp{
+      background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('img/header.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100%
+  }
+  h3, p{
+      color: gold;
+  }
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 50%;
+      margin: auto;
+  }
+  .control-label{
+      color: white;
+  }
+  .classmatepic div{
+    margin-top: 40px;
+  }
+  .gallery h3, p{
+    text-align: center;
+    color: #FFDAB9;
+  }
+  .gallery-footer{
+    background-color: #222222;
+    opacity: 0.8;
+    border-style: solid;
+    border-color: gold;
+  }
+  .memories{
+    background-color: #222222;
+    border-color: gold;
+    margin-right: 20px;
+  }
+  .memories h4{
+    margin-top: 30px;
+  }
+  .control-label{
+    font-size: 16px;
+    color: #FFDAB9
+  }
+  .form-control{
+    margin-bottom: 20px;
+  }
