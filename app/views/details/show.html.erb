@@ -1,0 +1,33 @@
+<h1>Listing users</h1>
+
+<div class="table-responsive">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Attend</th>
+      <th>Batch</th>
+      <th>Seat</th>
+      <th>Allergy</th>
+      <th>Note</th>
+      <th colspan="9"></th>
+    </tr>
+  </thead>
+
+<% @details.each do |detail| %>
+  <tr>
+    <td><%= detail.name %></td>
+    <td><%= detail.email %></td>
+    <td><%= detail.phone %></td>
+    <td><%= detail.attend %></td>
+    <td><%= detail.batch %></td>
+    <td><%= detail.seat %></td>
+    <td><%= detail.allergy %></td>
+    <td><%= detail.note %></td>
+    
+  </tr>
+<% end %>
+</table>
+</div>
