@@ -71,13 +71,6 @@ class DetailTest < ActiveSupport::TestCase
     end
   end
   
-  test "email addresses should be unique" do
-    duplicate_detail = @detail.dup
-    duplicate_detail.email = @detail.email.upcase
-    @detail.save
-    assert_not duplicate_detail.valid?
-  end
-  
     test "email addresses should be saved as lower-case" do
     mixed_case_email = "Foo@ExAMPle.CoM"
     @detail.email = mixed_case_email
