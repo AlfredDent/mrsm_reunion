@@ -11,9 +11,10 @@ class DetailsController < ApplicationController
     @detail = Detail.new(detail_params)
     
     if @detail.save
+      flash[:notice] = 'Successfully submit form'
       redirect_to root_path
     else
-      redirect_to info_path
+      redirect_to root_path
     end
   end
 

@@ -154,15 +154,13 @@ aside {
 header {
   position: relative;
   width: 100%;
-  height: 100%;
   min-height: auto;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), image-url('img/header.jpg');
-  background-size: 100%;
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), image-url('img/header.png');
   background-attachment: fixed;
   background-repeat: no-repeat;
   text-align: center;
@@ -446,9 +444,10 @@ i.glyphicon-home{
 }
 .classmate{
       background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), image-url('img/bg_classmate.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-      background-size: 100%
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100%;
+      height: 100%;
 }
 .classmate h1{
   text-align: center;
@@ -456,17 +455,17 @@ i.glyphicon-home{
   font-family: papyrus;
 }
   .rsvp{
-      background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), image-url('img/header.jpg');
+      background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), image-url('img/header.png');
       background-repeat: no-repeat;
       background-attachment: fixed;
-      background-size: 100%
+      width: 100%;
   }
   h3, p{
       color: gold;
   }
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
-      width: 50%;
+      width: 70%;
       margin: auto;
   }
   .control-label{
@@ -485,10 +484,15 @@ i.glyphicon-home{
     border-style: solid;
     border-color: gold;
   }
+  .tshirt{
+    background-color: #222222;
+    opacity: 0.8;
+    border-style: solid;
+    border-color: gold;
+  }
   .memories{
     background-color: #222222;
-    border-color: gold;
-    margin-right: 20px;
+    border-color: cyan;
   }
   .memories h4{
     margin-top: 30px;
@@ -500,3 +504,6 @@ i.glyphicon-home{
   .form-control{
     margin-bottom: 20px;
   }
+  h1.sansserif {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}

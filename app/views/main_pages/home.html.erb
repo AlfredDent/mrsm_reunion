@@ -7,9 +7,9 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top"><%= image_tag("http://i103.photobucket.com/albums/m128/Kiren_Oshie/ANSARAlogo.png", style: "height: 50px; width: 65px; margin-top: -5px;") %></a>
-                <a class="navbar-brand page-scroll" href="#page-top"><%= image_tag("http://1.bp.blogspot.com/-a73IarWQd-I/T2xZcZAlCDI/AAAAAAAAErQ/KU5tOOvCDVs/s1600/Logo_MRSM1.png", style: "height: 50px; width: 75px; margin-top: -5px;") %></a>
-                <a class="navbar-brand page-scroll" href="#page-top"><%= image_tag("img/ansara.jpg", style: "height: 50px; width: 150px; margin-top: -5px;") %></a>
+                <a class="navbar-brand page-scroll" href="#page-top"><%= image_tag("http://i103.photobucket.com/albums/m128/Kiren_Oshie/ANSARAlogo.png", style: "height: 50px; width: 65px; margin-top: -10px;", class: "img-responsive") %></a>
+                <a class="navbar-brand page-scroll" href="#page-top"><%= image_tag("http://1.bp.blogspot.com/-a73IarWQd-I/T2xZcZAlCDI/AAAAAAAAErQ/KU5tOOvCDVs/s1600/Logo_MRSM1.png", style: "height: 50px; width: 75px; margin-top: -10px;", class: "img-responsive") %></a>
+                
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -40,19 +40,22 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <header>
+    <header class="img-responsive">
         <div class="header-content">
             <div class="header-content-inner" id="homeHeading">
                 <div>
+                    <% flash.each do |message_type, message| %>
+                      <div class="alert alert-<%= message_type %>"><%= message %></div>
+                    <% end %>
                     <br>
                     <br>
                     <!-- <h2 style="font-family: 'Ludlow-Strong-Ale'; color: white;"><b>MONCHEH’ 07/17</b></h2> -->
-                    <%= image_tag("img/moncheh2.png", style: "width: 450px; height: 130px; margin-bottom: -20px;") %>
+                    <%= image_tag("img/moncheh2.png", class: "img-responsive") %>
                     <h1>10<sup>th</sup>&nbsp YEARS&nbsp ANNIVESARY<br>MRSM&nbsp GEMENCHEH’S&nbsp REUNION</h1>
                     <!-- <a href="http://fontmeme.com/calligraphy-fonts/">"http://fontmeme.com/permalink/170224/27fe256e62ff4685dc43f67d23fdef7c.png", alt: "calligraphy-fonts" border="0") %></a> -->
                     <hr>
 
-                   <iframe src="http://free.timeanddate.com/countdown/i5lsnwzu/n122/cf12/cm0/cu4/ct5/cs1/ca0/co0/cr0/ss0/cacfff/cpcfff/pct/tcfff/fn2/fs250/szw576/szh243/iso2017-04-15T20:00:00" allowTransparency="true" frameborder="0" width="586" height="124"></iframe>
+                   <iframe src="http://free.timeanddate.com/countdown/i5ly8xkg/n122/cf12/cm0/cu4/ct5/cs1/ca0/co0/cr0/ss0/cacfff/cpcfff/pct/tcfff/fs250/szw320/szh135/iso2017-04-15T09:00:00" allowTransparency="true" frameborder="0" width="438" height="72" class="img-responsive" style="margin: auto;"></iframe>
 
 
                     <!-- <iframe src="http://free.timeanddate.com/countdown/i5lsml15/n122/cf12/cm0/cu4/ct5/cs1/ca0/co0/cr0/ss0/cacfff/cpcfff/pct/tcfff/fs400/szw576/szh243/iso2017-04-15T20:00:00" allowTransparency="true" frameborder="0" width="1252" height="208" style=""></iframe> -->
@@ -64,26 +67,28 @@
         </div>
     </header>
 
-    <section class="bg-primary" id="whenwhere" style="margin-top: -40px;">
+    <section class="bg-primary" id="whenwhere">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                	<%= image_tag("img/whenwhere.png", style: "width: 600px; height: 200px; margin-bottom: -50px;") %>
-                    <hr class="light">
-                    <%= image_tag("img/quote1.png", style: "width: 1300px;height: 200px; margin-left: -300px; margin-top: -50px; margin-bottom: -50px;") %>
+                	<%= image_tag("img/whenwhere.png", class: "img-responsive") %>
+                    <hr class="light" style="margin-bottom: -20px; margin-top: -30px;">
+                    <%= image_tag("img/quote1.png", class: "img-responsive") %>
                     <!-- <p style="font-size: 20px; color: white">" DON'T COUNT THE YEARS...COUNT THE MEMORIES "</p> -->
-                    <p style="font-size: 22px;">There is nothing like returning to a place that remains unchanged<br>to find the ways in which you yourself have altered<br><span style="font-size: 15px; color: white">•••• Nelson Mandela ••••</span></p>
+                    <p style="font-size: 22px;">There is nothing like returning to a place that remains unchanged to find the ways in which you yourself have altered<br><span style="font-size: 15px; color: white">•••• Nelson Mandela ••••</span></p>
                     <p style="color: coral; font-size: 22px;">Dear alumni,<br>Please lock the date and let's meet there!</p>
                     <br><br>
                 </div>
             </div>
             <div class="row text-center">
             	<div class="col-md-4">
-            		<div class="well school-tour" style="background-color: #464646;">
-            			<div style="height: 300px;">
+            		<div class="well school-tour">
+            			<div style="height: 290px;">
             				
             			</div>
-            			<%= image_tag("img/school_icon.png", style: "height: 70px; width: 70px; margin-top: 10px;") %>
+                    </div>
+                    <div class="well" style="background-color: #464646; border-style: none; margin-top: -25px;">
+            			<%= image_tag("img/school_icon.png", style: "height: 80px; width: 80px; margin-top: 10px;") %>
             			<h2>Activities</h2>
             			<hr class="light">
             			<p style="font-size: 16px; color: #FFDAB9">School Tour, Sports Match<br>Coffee Talk and many more...</p>
@@ -91,29 +96,32 @@
             		</div>
             	</div>
             	<div class="col-md-4">
-            		<div class="well dinner" style="background-color: #464646;">
+            		<div class="well dinner">
             			<div style="height: 300px;">
             				
             			</div>
+                    </div>
+                    <div class="well" style="background-color: #464646; border-style: none; margin-top: -25px;">
             			<%= image_tag("img/dinner2.png", style: "height: 90px; width: 90px; margin-top: 10px;") %>
             			<h2 style="margin-top: 0">Sedasawarsa Dinner</h2>
             			<hr class="light">
                         <p style="color: white; font-size: 16px; color: #FFDAB9">" REKINDLE OLD FRIENDSHIP<br>AND<br>CREATING NEW MEMORIES "</p>
-                        <p style="color: white">Saturday, 15 April 2017<br>8:00 PM - 11:30 PM<br>MRSM Gemencheh's Hall<br>Negeri Sembilan, Malaysia<br>Dress Code : <b>Casual</b></p>
+                        <p style="color: white">Saturday, 15 April 2017<br>8:00 PM - 11:30 PM<br>MRSM Gemencheh's Hall<br>Negeri Sembilan, Malaysia<br>Dress Code : <b style="color: gold">Smart & Casual</b></p>
             		</div>
             	</div>
             	<div class="col-md-4">
-            		<div class="well photoshoot" style="background-color: #464646;">
-            			<div style="height: 308px;"></div>
+            		<div class="well photoshoot">
+            			<div style="height: 290px;">
+
+    `                   </div>
+                    </div>
+                    <div class="well" style="background-color: #464646; border-style: none; margin-top: -25px; height: 450px;">
             			<%= image_tag("img/photoshoot.png", style: "height: 70px; width: 70px; margin-top: 10px;") %>
             			<h2>Photoshoot Session</h2>
             			<hr class="light">
             			<p style="color: #FFDAB9; font-size: 18px;">We do not remember days,	<br>We remember moments.<br><span style="color: white; font-size: 16px;"> •••• Cesare Pavese ••••</span></p>
-                        <br><br><br><br><br><br>
             		</div>
             	</div>
-                    <br><br><br>
-                    <!-- <a href="#classmates" class="page-scroll btn btn-default btn-xl sr-button">CLASSMATES</a> -->
             </div>
         </div>
     </section>
@@ -126,96 +134,94 @@
                     <hr class="light"><br>
                 </div>
             </div>
-            <div style="width: 100%">
+            <div>
                 <div class="row">
-                    <div class="col-md-3">
-                        <%= image_tag("img/syafiq.png") %>
-                        <h1 class="classmate">Syafiq</h1>
+                    <div class="col-md-2">
+                        <%= image_tag("img/alumni/umirah_rasidah.png", class: "img-responsive", style: "margin: auto;") %><br>
+                        <p style="font-size: 30px; color: gold">Umirah</p>
                     </div>
-                    <div class="col-md-3">
-                    	<%= image_tag("img/syafiq.png") %>
-                        <h1 class="classmate">Syafiq</h1>
+                    <div class="col-md-2">
+                    	<%= image_tag("img/alumni/azmira.png", class: "img-responsive", style: "margin: auto;") %><br>
+                        <p style="font-size: 30px; color: gold">Azmira</p>
                     </div>
-                    <div class="col-md-3">
-                    	<%= image_tag("img/syafiq.png") %>
-                        <h1 class="classmate">Syafiq</h1>
+                    <div class="col-md-2">
+                    	<%= image_tag("img/alumni/amirah.png", class: "img-responsive", style: "margin: auto;") %><br>
+                        <p style="font-size: 30px; color: gold">Amirah</p>
                     </div>
-                    <div class="col-md-3">
-                    	<%= image_tag("img/syafiq.png") %>
-                        <h1 class="classmate">Syafiq</h1>
+                    <div class="col-md-2">
+                    	<%= image_tag("img/alumni/marzuki_rostam.png", class: "img-responsive", style: "margin: auto;") %><br>
+                        <p style="font-size: 30px; color: gold">Marzuki</p>
                     </div>
-                </div>
-                <div class="row classmatepic">
-                    <div class="col-md-3">
-                        <%= image_tag("img/syafiq.png") %>
-                        <h1 class="classmate">Syafiq</h1>
+                    <div class="col-md-2">
+                    	<%= image_tag("img/alumni/adelina.png", class: "img-responsive", style: "margin: auto;") %><br>
+                        <p style="font-size: 30px; color: gold">Adelina</p>
                     </div>
-                    <div class="col-md-3">
-                    	<%= image_tag("img/syafiq.png") %>
-                        <h1 class="classmate">Syafiq</h1>
-                    </div>
-                    <div class="col-md-3">
-                    	<%= image_tag("img/syafiq.png") %>
-                        <h1 class="classmate">Syafiq</h1>
-                    </div>
-                    <div class="col-md-3">
-                    	<%= image_tag("img/syafiq.png") %>
-                        <h1 class="classmate">Syafiq</h1>
-                    </div>
-                </div>
-                <div class="row classmatepic">
-                    <div class="col-md-3">
-                        <%= image_tag("img/syafiq.png") %>
-                        <h1 class="classmate">Syafiq</h1>
-                    </div>
-                    <div class="col-md-3">
-                    	<%= image_tag("img/syafiq.png") %>
-                        <h1 class="classmate">Syafiq</h1>
-                    </div>
-                    <div class="col-md-3">
-                    	<%= image_tag("img/syafiq.png") %>
-                        <h1 class="classmate">Syafiq</h1>
-                    </div>
-                    <div class="col-md-3">
-                    	<%= image_tag("img/syafiq.png") %>
-                        <h1 class="classmate">Syafiq</h1>
-                    </div>
-                </div>
-                <div class="row classmatepic">
-                    <div class="col-md-3">
-                        <%= image_tag("img/syafiq.png") %>
-                        <h1 class="classmate">Syafiq</h1>
-                    </div>
-                    <div class="col-md-3">
-                    	<%= image_tag("img/syafiq.png") %>
-                        <h1 class="classmate">Syafiq</h1>
-                    </div>
-                    <div class="col-md-3">
-                    	<%= image_tag("img/syafiq.png") %>
-                        <h1 class="classmate">Syafiq</h1>
-                    </div>
-                    <div class="col-md-3">
-                    	<%= image_tag("img/syafiq.png") %>
-                        <h1 class="classmate">Syafiq</h1>
+                    <div class="col-md-2">
+                    	<%= image_tag("img/alumni/bazilah.png", class: "img-responsive", style: "margin: auto;") %><br>
+                        <p style="font-size: 30px; color: gold">Bazilah</p>
                     </div>
                 </div>
                 <br>
+                <div class="row">
+                    <div class="col-md-2">
+                        <%= image_tag("img/alumni/lesza.png", class: "img-responsive", style: "margin: auto;") %><br>
+                        <p style="font-size: 30px; color: gold">Iesza</p>
+                    </div>
+                    <div class="col-md-2">
+                    	<%= image_tag("img/alumni/nadiah.png", class: "img-responsive", style: "margin: auto;") %><br>
+                        <p style="font-size: 30px; color: gold">Nadiah</p>
+                    </div>
+                    <div class="col-md-2">
+                    	<%= image_tag("img/alumni/anuar.png", class: "img-responsive", style: "margin: auto;") %><br>
+                        <p style="font-size: 30px; color: gold">Anuar</p>
+                    </div>
+                    <div class="col-md-2">
+                    	<%= image_tag("img/alumni/syira.png", class: "img-responsive", style: "margin: auto;") %><br>
+                        <p style="font-size: 30px; color: gold">Syira</p>
+                    </div>
+                    <div class="col-md-2">
+                    	<%= image_tag("img/alumni/marissa.png", class: "img-responsive", style: "margin: auto;") %><br>
+                        <p style="font-size: 30px; color: gold">Marissa</p>
+                    </div>
+                    <div class="col-md-2">
+                    	<%= image_tag("img/alumni/syasya.png", class: "img-responsive", style: "margin: auto;") %><br>
+                        <p style="font-size: 30px; color: gold">Syasya</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-2">
+                        <%= image_tag("img/alumni/syaza.png", class: "img-responsive", style: "margin: auto;") %><br>
+                        <p style="font-size: 30px; color: gold">Syaza</p>
+                    </div>
+                    <div class="col-md-2">
+                    	<%= image_tag("img/alumni/idayu.png", class: "img-responsive", style: "margin: auto;") %><br>
+                        <p style="font-size: 30px; color: gold">Idayu</p>
+                    </div>
+                    <div class="col-md-2">
+                    	<%= image_tag("img/alumni/sayyidah.png", class: "img-responsive", style: "margin: auto;") %><br>
+                        <p style="font-size: 30px; color: gold">Sayyidah</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="gallery-footer col-md-6 col-md-offset-3">
+	        	        <h3 class="gallery" style="text-align: center; color: white;">Not in the list?</h3>
+	                    <p class="gallery">Kindly send your photo and short name to us. We will make it available in the website.</p>
+	                    <p class="gallery">Contact : Umie +60176164692</p>
+	                </div>
+                </div>
             </div>
-            <div class="gallery-footer col-md-6 col-md-offset-3">
-	        	<h3 class="gallery" style="text-align: center; color: white;">Not in the list?</h3>
-	            <p class="gallery">Kindly send your photo and short name to us. We will make it available in the website.</p>
-	            <p class="gallery">Contact : Syafiq Sinwan +60164464070</p>
-	        </div>
-        </div><br><br>
+        </div>
     </section>
 
 
-    <section class="bg-primary" id="gallery" style="margin-top: -100px;">
+    <section class="bg-primary" id="gallery">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <%= image_tag("img/gallery.png", style: "width: 450px; height: 200px; margin-bottom: -50px; margin-left: 20px;") %>
-                    <hr class="light">
+                    <%= image_tag("img/gallery.png", class: "img-responsive", style: "margin:auto;") %>
+                    <hr class="light" style="margin-top: -50px;">
                 </div>
             </div>
         </div>
@@ -414,7 +420,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <%= image_tag("img/memories.png", style: "width: 500px; height: 200px; margin-bottom: -50px; margin-left: 20px;") %>
+                    <%= image_tag("img/memories.png", class: "img-responsive", style: "margin: auto") %>
                     <hr class="light">
                 </div>
             </div>
@@ -425,54 +431,61 @@
                     <p style="color: white; font-size: 26px;">••• Share with us any best memories you have •••</p><br>
                 </div>
             </div>
-            <div class="row" style="width: 1200px; margin-left: -20px;">
+            <div class="row col-md-8" style="width: 100%;">
                 <div class="col-md-4">
                     <div class="row well memories">
-                    	<p style="text-align: left; font-size: 16px;">Run it up the flagpole turd polishing powerPointless, so pixel pushing, so organic growth. We need to dialog around your choice of work attire.</p>
+                    	<p style="text-align: left; font-size: 16px;"><br>" Thanks to everyone in GMC i have found memories of life in high school. "<br><br></p>
                     </div>
                     <div class="row well memories" style="margin-top: -21px;">
                     	<div class="col-md-5">
-                    		<%= image_tag("img/syafiq-memories.png") %>
+                    		<%= image_tag("img/alumni/syasya.png", class: "img-responsive", style: "margin: auto") %>
                     	</div>
                     	<div class="col-md-7">
-                    		<h4><span style="color: white;">June '89</span><br>Last School Day</h4>
+                    		<h3 style="margin: auto;"><span style="color: white; text-align: center;">Syasya</span><br>SPM 2011</h3>
                     	</div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="row well memories">
-                    	<p style="text-align: left; font-size: 16px;">Run it up the flagpole turd polishing powerPointless, so pixel pushing, so organic growth. We need to dialog around your choice of work attire.</p>
+                    	<p style="text-align: left; font-size: 16px;"><br>" GMC is where we treat our friends like family and our family like friends. "<br><br></p>
                     </div>
                     <div class="row well memories" style="margin-top: -21px;">
                     	<div class="col-md-5">
-                    		<%= image_tag("img/syafiq-memories.png") %>
+                    		<%= image_tag("img/alumni/marzuki_rostam.png", class: "img-responsive", style: "margin: auto") %>
                     	</div>
                     	<div class="col-md-7">
-                    		<h4><span style="color: white;">June '89</span><br>Last School Day</h4>
+                    		<h3 style="margin: auto;"><span style="color: white; text-align: center;">Marzuki</span><br>SPM 2011</h3>
                     	</div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="row well memories">
-                    	<p style="text-align: left; font-size: 16px;">Run it up the flagpole turd polishing powerPointless, so pixel pushing, so organic growth. We need to dialog around your choice of work attire.</p>
+                    	<p style="text-align: left; font-size: 16px;"><br>" I love everything that's old. Old schools, old friends and old times. I love GMC so much. "<br><br></p>
                     </div>
                     <div class="row well memories" style="margin-top: -21px;">
                     	<div class="col-md-5">
-                    		<%= image_tag("img/syafiq-memories.png") %>
+                    		<%= image_tag("img/alumni/umirah_rasidah.png", class: "img-responsive") %>
                     	</div>
                     	<div class="col-md-7">
-                    		<h4><span style="color: white;">June '89</span><br>Last School Day</h4>
+                    		<h3 style="margin: auto;"><span style="color: white; text-align: center;">Umie</span><br>SPM 2011</h3>
                     	</div>
                     </div>
                 </div>
             </div>
+            <div class="row" style="margin-top: 20px;">
+                    <div class="gallery-footer col-md-6 col-md-offset-3">
+                        <h3 class="gallery" style="text-align: center; color: white;">Have something to share?</h3>
+                        <p class="gallery">Kindly send your memories, photo and short name to us. We will make it available in the website.</p>
+                        <p class="gallery">Contact : Umie +60176164692</p>
+                    </div>
+                </div>
         </div>
     </section>
     <section id="rsvp" class="rsvp">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <%= image_tag("img/rsvp.png", style: "width: 500px; height: 200px; margin-bottom: -50px; margin-left: 70px;") %>
+                    <%= image_tag("img/rsvp.png", class: "img-responsive", style: "margin: auto") %>
                     <hr class="light">
                     <p style="text-align: center;">Please reply and indicate whether you will be able to attend</p>
                 </div>
@@ -480,183 +493,94 @@
         </div>
         <div class="container">
             <div class="row">
-  <div class="col-md-8 col-md-offset-2 well" style="opacity: 0.7; background-color: #222222">
-    <%= form_for(@detail, url: details_path) do |f| %>
+				<div class="col-md-8 col-md-offset-2 well" style="opacity: 0.7; background-color: #222222">
+					<%= form_for(@detail, url: details_path) do |f| %>
     
-    <div class="form-group">
-      <div class="col-md-11">
-        <%= f.label :name, class: "control-label" %>
-        <%= f.text_field :name, class: "form-control", :required => 'required' %>
-      </div>
-    </div>
+					<div class="form-group">
+						<div class="col-md-11">
+							<%= f.label :name, class: "control-label" %>
+							<%= f.text_field :name, class: "form-control", :required => 'required' %>
+						</div>
+					</div>
       
-    <div class="form-group">
-      <div class="col-md-11">
-        <%= f.label :email, class: "control-label" %>
-        <%= f.email_field :email, class: "form-control", :required => 'required' %>
-      </div>
-    </div>
+					<div class="form-group">
+						<div class="col-md-11">
+							<%= f.label :email, class: "control-label" %>
+							<%= f.email_field :email, class: "form-control", :required => 'required' %>
+						</div>
+					</div>
       
-    <div class="form-group">
-      <div class="col-md-11">
-        <%= f.label :phone, class: "control-label" %>
-        <%= f.text_field :phone, class: "form-control", :required => 'required' %>
-      </div>
-    </div>
+					<div class="form-group">
+						<div class="col-md-11">
+							<%= f.label :phone, class: "control-label" %>
+							<%= f.text_field :phone, class: "form-control", :required => 'required' %>
+						</div>
+					</div>
     
-    <div class="form-group">
-      <div class="col-md-4 control-label">
-         <%= f.label :attend_ask, "Will You Attend" %>
-      </div>
-    </div>
+					<div class="form-group">
+						<div class="col-md-4 control-label">
+							<%= f.label :attend_ask, "Will You Attend" %>
+						</div>
+					</div>
     
-     <div class="form-group">
-      <div class="col-md-7">
-        <%= f.radio_button(:attend, "Yes") %>
-        <%= f.label :attend_yes, "Yes, I will be there", style: "color: white;" %><br>
-        <%= f.radio_button(:attend, "No") %>
-        <%= f.label :attend_no, "Sorry, I can't come", style: "color: white;" %>
-      </div>
-    </div>
+					<div class="form-group">
+						<div class="col-md-7">
+							<%= f.radio_button(:attend, "Yes") %>
+							<%= f.label :attend_yes, "Yes, I will be there", style: "color: white;" %><br>
+							<%= f.radio_button(:attend, "No") %>
+							<%= f.label :attend_no, "Sorry, I can't come", style: "color: white;" %>
+						</div>
+					</div>
     
-    <div class="form-group">
-      <div class="col-md-4 control-label">
-         <%= f.label :batch, "SPM Batch "%>
-      </div>
-    </div>
+					<div class="form-group">
+						<div class="col-md-4 control-label">
+							<%= f.label :batch, "SPM Batch "%>
+						</div>
+					</div>
     
-    <div class="form-group">
-      <div class="col-md-7">
-        <%= f.select :batch, options_for_select([['Please select', nil], ['2008', 2008], ['2009', 2009], ['2010', 2010], ['2011', 2011], ['2012', 2012], ['2013', 2013], ['2014', 2014], ['2015', 2015], ['2016', 2016]], nil), {}, {class: "form-control", :required => 'required'} %>
-      </div>
-    </div>
+					<div class="form-group">
+						<div class="col-md-7">
+							<%= f.select :batch, options_for_select([['2008', 2008], ['2009', 2009], ['2010', 2010], ['2011', 2011], ['2012', 2012], ['2013', 2013], ['2014', 2014], ['2015', 2015], ['2016', 2016]]), {}, {class: "form-control", :required => 'required'} %>
+						</div>
+					</div>
     
-    <div class="form-group">
-      <div class="col-md-4 control-label">
-         <%= f.label :seat, "Seat to Reserve"%>
-      </div>
-    </div>
+					<div class="form-group">
+						<div class="col-md-4 control-label">
+							<%= f.label :seat, "Seat to Reserve"%>
+						</div>
+					</div>
     
-    <div class="form-group">
-      <div class="col-md-7">
-        <%= f.select :seat, options_for_select([['Please select', nil], ['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5], ['6', 6], ['7', 7], ['8', 8], ['9', 9], ['10', 10]], nil), {}, {class: "form-control", :required => 'required'} %>
-      </div>
-    </div>
+					<div class="form-group">
+						<div class="col-md-7">
+							<%= f.select :seat, options_for_select([['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5], ['6', 6], ['7', 7], ['8', 8], ['9', 9], ['10', 10]]), {}, {class: "form-control", :required => 'required'} %>
+						</div>
+					</div>
     
-    <div class="form-group">
-      <div class="col-md-11">
-      <%= f.label :allergy, "Food Allergies", class: "control-label" %>
-      <%= f.text_field :allergy, class: "form-control"%>
-      </div>
-    </div>
+					<div class="form-group">
+						<div class="col-md-11">
+							<%= f.label :allergy, "Food Allergies", class: "control-label" %>
+							<%= f.text_field :allergy, class: "form-control"%>
+						</div>
+					</div>
       
-    <div class="form-group">
-      <div class="col-md-11">
-      <%= f.label :note, class: "control-label" %>
-      <%= f.text_field :note, class: "form-control"%>
-      </div>
-    </div>
+					<div class="form-group">
+						<div class="col-md-11">
+							<%= f.label :note, class: "control-label" %>
+							<%= f.text_field :note, class: "form-control"%>
+						</div>
+					</div>
       
-      <%= f.submit "Submit", class: "form-control", style: "background-color: #333333; color: gold; border-color: gold;" %>
-    <% end %>
-  </div>
-</div>
-            <!-- <div class="row">
-                <div class="col-md-8 col-md-offset-2 well" style="opacity: 0.7; background-color: #222222">
-                    
-                		<form>
-                		    
-	                        <div class="row">
-	                            <div class="form-group">
-	                                <div class="col-md-11">
-	                                    
-	                                </div>
-	                            </div>
-	                            <div class="form-group">
-	                            	<div class="col-md-11">
-	                                    <label class="control-label">Your Email</label>
-	                                    <input class="form-control" type="email" name="email" id="email" placeholder="sedasawarsagmc@gmail.com">
-	                                </div>
-	                            </div>
-	                            <div class="form-group">
-	                            	<div class="col-md-11">
-	                                    <label class="control-label">Your Phone Number</label>
-	                                    <input class="form-control" type="text" name="phone" id="phone" placeholder="+60123456789">
-	                                </div>
-	                            </div>
-	                        </div>
-	                        <div class="row">
-	                            <div class="form-group">
-	                                <div>
-	                                    <label class="col-md-4 control-label">Will You Attend</label>
-	                                </div>
-	                                <div class="col-md-7">
-	                                    <input type="radio" name="attend" value="yes"><span style="color: white;">  Yes, I will be there </span><br>
-	                                    <input type="radio" style="margin-bottom: 20px;" name="attend" value="no"><span style="color: white;"> Sorry, I can't come </span>
-	                                </div>
-	                            </div>
-	                            <div class="form-group">
-	                                <div>
-	                                    <label class="col-md-4 control-label">SPM Batch</label>
-	                                </div>
-	                                <div class="col-md-7">
-	                                    <select name="seats" id="seats" class="form-control">
-	                                      <option> -- Pleaase Select --</option>
-	                                      <option value="2008">2008</option>
-	                                      <option value="2009">2009</option>
-	                                      <option value="2010">2010</option>
-	                                      <option value="2011">2011</option>
-	                                      <option value="2012">2012</option>
-	                                      <option value="2013">2013</option>
-	                                      <option value="2014">2014</option>
-	                                      <option value="2015">2015</option>
-	                                      <option value="2016">2016</option>
-	                                    </select>
-	                                </div>
-	                            </div>
-	                            <div class="form-group">
-	                                <div>
-	                                    <label class="col-md-4 control-label">Seats to Reserve</label>
-	                                </div>
-	                                <div class="col-md-7">
-	                                    <select name="seats" id="seats" class="form-control">
-	                                      <option> -- Pleaase Select --</option>
-	                                      <option value="1">1</option>
-	                                      <option value="2">2</option>
-	                                      <option value="3">3</option>
-	                                      <option value="4">4</option>
-	                                      <option value="5">5</option>
-	                                      <option value="6">6</option>
-	                                      <option value="7">7</option>
-	                                      <option value="8">8</option>
-	                                      <option value="9">9</option>
-	                                      <option value="10">10</option>
-	                                    </select>
-	                                    <!-- <p class="help-block" style="font-size: 12px; color: white;"><span style="color: red">*</span>1 table, 10 seats</p>
-	                                </div>
-	                            </div>
-	                            <div class="form-group">
-	                            	<div class="form-group">
-		                            	<div class="col-md-11">
-		                                    <label class="control-label">Food Allergies</label>
-		                                    <textarea type="text" rows="3" cols="50" name="allergies" id="allergies" class="form-control" placeholder="Please describe any allergies that you have..."></textarea>
-		                                </div>
-		                            </div>
-	                            </div>
-	                            <div class="form-group">
-	                            	<div class="col-md-11">
-		                                    <label class="control-label">Notes</label>
-		                                    <textarea type="text" rows="3" cols="50" name="notes" id="notes" class="form-control" placeholder="Notes..."></textarea>
-		                                </div>
-	                            </div>
-	                            <input type="submit" name="submit" id="submit" value="SUBMIT" class="form-control" style="background-color: #333333; color: gold; border-color: gold;">
-	                        </div>
-	                    </form>
-                </div> -->
-                <!-- <div>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSef9uq_A0p0zJksQ-BY0uEARRr7yrPrgfXIInGSk46tXW5yGg/viewform">"img/tshirt_rsvp.png", style="height: 350px; width: 350px; margin-left: -120px; margin-top: -75px;") %></a>
-                </div> -->
-            </div>
+					<%= f.submit "Submit", class: "form-control", style: "background-color: #333333; color: gold; border-color: gold;" %>
+					<% end %>
+				</div>
+				<div class="row">
+                    <div class="gallery-footer col-md-6 col-md-offset-3">
+                        <h3 class="gallery" style="text-align: center; color: gold;">Tshirt Sign Up! Order now! <%= link_to "CLICK HERE", 'https://docs.google.com/forms/d/e/1FAIpQLSef9uq_A0p0zJksQ-BY0uEARRr7yrPrgfXIInGSk46tXW5yGg/viewform'  %></h3>
+                        <%= image_tag("img/shirt_design.jpeg", class: "img-responsive") %>
+                        <br>
+                    </div>
+                </div>
+			</div>       
         </div>
     </section>
     <div class="page-footer" style="margin-left: 10px; margin-top: -50px; color: white;">
