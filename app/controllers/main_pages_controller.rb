@@ -4,4 +4,8 @@ class MainPagesController < ApplicationController
     @detail = Detail.new
   end
   
+  def fullsize
+    
+  end
+  
 end
