@@ -21,7 +21,7 @@ class DetailsController < ApplicationController
 
     def detail_params
       params.require(:detail).permit(:name, :email, :phone,
-                                   :attend, :batch, :seat)
+                                   :attend, :batch, :seat, :allergy, :note)
     end
   
 end
