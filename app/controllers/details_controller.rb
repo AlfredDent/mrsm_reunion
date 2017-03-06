@@ -14,6 +14,7 @@ class DetailsController < ApplicationController
       flash[:notice] = 'Successfully submit form'
       redirect_to root_path
     else
+      flash[:notice] = 'Please resubmit the form'
       redirect_to root_path
     end
   end
