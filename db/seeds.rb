@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+    Image.create([{name: "1_full"}, {name: "2_full"}, {name: "3_full"}, {name: "4_full"}, {name: "5_full"}, {name: "6_full"}, {name: "7_full"}, {name: "8_full"}, {name: "9_full"}, {name: "10_full"}, {name: "11_full"}, {name: "12_full"}])
