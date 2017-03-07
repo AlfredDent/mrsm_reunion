@@ -11,10 +11,11 @@ class DetailsController < ApplicationController
     @detail = Detail.new(detail_params)
     
     if @detail.save
-      flash[:notice] = 'Successfully submit form'
+      flash[:success] = 'success'
+      #render 'success'
       redirect_to root_path
     else
-      flash[:notice] = 'Please resubmit the form'
+      flash[:fail] = @detail.errors.full_messages.each
       redirect_to root_path
     end
   end

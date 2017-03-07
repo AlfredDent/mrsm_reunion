@@ -45,7 +45,11 @@
             <div class="header-content-inner" id="homeHeading">
                 <div>
                     <% flash.each do |message_type, message| %>
-                      <div class="alert alert-<%= message_type %>"><%= message %></div>
+                      <% if message_type == "success" %>
+                          <%= javascript_tag "alert('Your form has been successfully submitted!')" %>
+                      <% elsif message_type == "fail" %>  
+                          <%= javascript_tag "alert('#{message} \\nPlease resubmit the form')" %>
+                      <% end %>    
                     <% end %>
                     <br>
                     <br>
@@ -499,7 +503,7 @@
         <div class="container">
             <div class="row">
 				<div class="col-md-8 col-md-offset-2 well" style="opacity: 0.7; background-color: #222222">
-					<%= form_for(@detail, url: details_path) do |f| %>
+					<%= form_for(@detail) do |f| %>
     
 					<div class="form-group">
 						<div class="col-md-11">
@@ -605,7 +609,7 @@
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-    <!-- Theme JavaScript -->
-    <script src="js/creative.min.js"></script>
+    <!-- Theme JavaScript 
+    <script src="creative.js"></script> -->
 
 </body>
