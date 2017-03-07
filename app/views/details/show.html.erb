@@ -4,6 +4,7 @@
 <table class="table">
   <thead>
     <tr>
+      <th>No</th>
       <th>Name</th>
       <th>Email</th>
       <th>Phone</th>
@@ -18,6 +19,7 @@
 
 <% @details.each do |detail| %>
   <tr>
+    <td><%= detail.id %></td>
     <td><%= detail.name %></td>
     <td><%= detail.email %></td>
     <td><%= detail.phone %></td>
