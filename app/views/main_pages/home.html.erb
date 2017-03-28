@@ -49,6 +49,8 @@
                           <%= javascript_tag "alert('Your form has been successfully submitted!')" %>
                       <% elsif message_type == "fail" %>  
                           <%= javascript_tag "alert('#{message} \\nPlease resubmit the form')" %>
+                      <% elsif message_type == "close" %>
+                          <%= javascript_tag "alert('Sorry, the reservation has been closed')" %>
                       <% end %>    
                     <% end %>
                     <br>

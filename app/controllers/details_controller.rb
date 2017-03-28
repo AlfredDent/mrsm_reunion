@@ -24,5 +24,12 @@ class DetailsController < ApplicationController
       params.require(:detail).permit(:name, :email, :phone,
                                    :attend, :batch, :seat, :allergy, :note)
     end
+    
+    def close
+      @detail = Detail.new()
+      
+      flash[:close] = 'close'
+      redirect_to root_path
+    end
   
 end

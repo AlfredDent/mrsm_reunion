@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/signup', to: 'users#new'
   get '/info', to: 'details#show'
   get '/details', to: 'details#new'
-  post '/details', to: 'details#create'
+  post '/details', to: 'details#close'
   get '/image/new', to: 'images#new'
    
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
